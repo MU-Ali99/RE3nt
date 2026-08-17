@@ -1,0 +1,9 @@
+node_modules
+.next
+.env
+coverage
+*.log
+*.tsbuildinfo
+storage/uploads/*
+!storage/uploads/.gitkeep
+!storage/uploads/demo-rental-agreement.txt

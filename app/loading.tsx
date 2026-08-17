@@ -1,0 +1,1 @@
+export default function Loading(){return <main className="grid min-h-screen place-items-center"><div className="text-center"><span className="mx-auto block size-8 animate-pulse rounded-xl bg-[var(--primary)]"/><p className="muted mt-3 text-sm font-bold">Loading Rent Manager…</p></div></main>}

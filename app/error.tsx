@@ -1,0 +1,2 @@
+"use client";import {AlertCircle} from "lucide-react";
+export default function ErrorPage({reset}:{error:Error&{digest?:string};reset:()=>void}){return <main className="grid min-h-screen place-items-center p-5"><section className="card max-w-md p-7 text-center"><AlertCircle className="mx-auto text-[var(--accent)]" size={36}/><h1 className="mt-4 text-2xl font-black">Something went wrong</h1><p className="muted mt-2">Your data is safe. Try loading this screen again.</p><button className="btn-primary mt-5" onClick={reset}>Try again</button></section></main>}
