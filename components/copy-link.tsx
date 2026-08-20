@@ -1,2 +1,0 @@
-"use client";import {useState} from "react";import {Copy,Check} from "lucide-react";
-export function CopyLink({path}:{path:string}){const[copied,setCopied]=useState(false);async function copy(){await navigator.clipboard.writeText(`${window.location.origin}${path}`);setCopied(true);setTimeout(()=>setCopied(false),1800)}return <button type="button" onClick={copy} className="btn-primary">{copied?<Check size={17}/>:<Copy size={17}/>} {copied?"Copied":"Copy invitation link"}</button>}

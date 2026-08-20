@@ -1,2 +1,0 @@
-import {PageHeader} from "@/components/page-header";
-export function ComingSoon({title,description}:{title:string;description:string}){return <div className="mx-auto max-w-5xl p-5 md:p-9"><PageHeader eyebrow="Next milestone" title={title} description={description}/><div className="card mt-7 p-7"><strong>This area is intentionally unavailable in the first vertical slice.</strong><p className="muted mt-2">The database and authorization foundations are ready; the workflow will be connected next.</p></div></div>}

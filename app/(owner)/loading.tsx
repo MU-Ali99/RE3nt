@@ -1,1 +1,0 @@
-export default function OwnerLoading(){return <div className="mx-auto max-w-6xl animate-pulse p-5 md:p-9"><div className="h-4 w-28 rounded bg-[var(--primary)]"/><div className="mt-3 h-10 w-72 rounded bg-[var(--surface-secondary)]"/><div className="mt-8 grid grid-cols-2 gap-3 lg:grid-cols-4">{[1,2,3,4].map(x=><div className="card h-24" key={x}/>)}</div></div>}

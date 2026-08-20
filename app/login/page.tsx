@@ -1,4 +1,5 @@
-import Link from "next/link";
-import { Building2 } from "lucide-react";
-import { LoginForm } from "./login-form";
-export default function LoginPage(){ return <main className="min-h-screen grid place-items-center p-5"><section className="card w-full max-w-md p-7 md:p-10"><div className="mb-8 flex items-center gap-3"><span className="brand-mark grid size-11 place-items-center rounded-xl bg-[var(--primary-dark)] text-white"><Building2/></span><div><p className="eyebrow">Welcome back</p><h1 className="text-2xl font-extrabold">Rent Manager</h1></div></div><p className="muted mb-6">A calm, simple view of your properties, tenants and rent.</p><LoginForm/><p className="muted mt-5 text-sm">New landlord? <Link className="font-bold text-[var(--primary-dark)] underline" href="/signup">Create an account</Link></p><p className="muted mt-3 text-xs">Demo credentials are pre-filled for local development.</p></section></main> }
+import { redirect } from "next/navigation";
+
+export default function LoginPreview() {
+  redirect("/demo");
+}

@@ -1,6 +1,0 @@
-RENTAL AGREEMENT — DEVELOPMENT SAMPLE
-
-This sample document is included only to demonstrate secure, authorized document access in Rent Manager.
-Property: Green House, Hyderabad
-Unit: Ground Floor
-Tenant: Rahul Sharma

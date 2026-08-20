@@ -1,51 +1,20 @@
-# Ghar — Rent Manager
+# Ghar — Design Prototype
 
-Ghar is a calm, mobile-first property and rent management application for independent landlords in India. It brings properties, units, tenants, rent, maintenance, documents, invitations and notices into one intentionally simple product.
+Ghar is a lightweight, database-free interface prototype for a future property and rent management product for independent landlords in India.
 
-## Design preview
+This branch intentionally contains only the design layer. The earlier PostgreSQL, Prisma, authentication and server-side MVP is preserved in the [`fullstack-mvp`](https://github.com/MU-Ali99/Ghar-Rent-manager/tree/fullstack-mvp) branch.
 
-The current design phase includes two database-free routes:
+## Included
 
-- `/` — public marketing website
-- `/demo` — interactive owner-product prototype
+- Editorial public website
+- Interactive owner dashboard prototype
+- Properties, tenants, rent, maintenance and activity views
+- Responsive desktop and mobile layouts
+- White Tokyo palette with lavender, deep purple and red accents
+- Realistic local mock data
+- No database, accounts, cloud services or environment variables
 
-The demo includes responsive designs for the owner overview, properties, tenants, rent collection, maintenance and activity. These routes use local mock data and can be reviewed without PostgreSQL.
-
-## Visual direction
-
-The interface uses a white Tokyo-inspired palette:
-
-- White primary canvas
-- Pale lavender secondary surfaces
-- Deep purple navigation and typography
-- Tokyo red status dots and attention markers
-- Editorial serif display typography
-- Compact sans-serif application typography
-
-The public site and product demo are inspired by premium editorial real-estate layouts while retaining an original Ghar identity.
-
-## Functional application
-
-The repository also contains the database-backed MVP:
-
-- Owner and tenant authentication
-- Server-side authorization
-- Property and unit management
-- Separate tenant and tenancy records
-- Rent generation and external payment recording
-- Maintenance requests and status history
-- Secure tenant invitations and tenant portal
-- Property notices and protected rental documents
-- Activity records
-
-## Technology
-
-- Next.js 15, React 19 and TypeScript
-- Tailwind CSS
-- PostgreSQL and Prisma
-- Vitest
-
-## Run the design locally
+## Local development
 
 Node.js 20 or newer is required.
 
@@ -54,43 +23,25 @@ npm install
 npm run dev -- -p 3001
 ```
 
-Open `http://localhost:3001` for the public site or `http://localhost:3001/demo` for the interactive product demo. PostgreSQL is not required for these two routes.
+Open:
 
-## Run the full database-backed application
-
-1. Install PostgreSQL 15 or newer.
-2. Copy `.env.example` to `.env` and update its values.
-3. Run the migration and seed commands.
-4. Start the development server.
-
-```bash
-npm install
-npm run db:migrate
-npm run db:seed
-npm run dev -- -p 3001
-```
-
-Demo accounts:
-
-| Role | Email | Password |
-| --- | --- | --- |
-| Owner | `raj@example.com` | `RentManager123!` |
-| Tenant | `rahul@example.com` | `Tenant123!` |
+- `http://localhost:3001` — public website
+- `http://localhost:3001/demo` — interactive application design
 
 ## Validation
 
 ```bash
 npm run typecheck
-npm test
 npm run build
 ```
 
-The business-rule tests cover authorization, rent status, partial payments, invitation validity and maintenance access.
+## Future layers
 
-## Storage and deployment
+Production capabilities will be added incrementally after the design is stable:
 
-Local document storage lives under `storage/uploads`. Documents are served through an authorized route rather than unrestricted public URLs.
-
-Production infrastructure is intentionally deferred. The planned deployment architecture is CI/CD-driven with a hosted PostgreSQL database and compute provisioned in Oracle Cloud or Azure.
-
-Do not commit `.env` files or production credentials.
+1. API and service layer
+2. Authentication and authorization
+3. PostgreSQL and migrations
+4. Property, tenancy and rent workflows
+5. Documents, invitations and notifications
+6. CI/CD, hosted infrastructure, monitoring and backups

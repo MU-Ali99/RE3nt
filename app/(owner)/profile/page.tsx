@@ -1,2 +1,0 @@
-import {requireOwner} from "@/lib/auth";import {logout} from "@/app/actions";import {PageHeader} from "@/components/page-header";
-export default async function Profile(){const{owner,user}=await requireOwner();return <div className="mx-auto max-w-3xl p-5 md:p-9"><PageHeader eyebrow="Account" title="Profile"/><div className="card mt-7 p-6"><p className="muted text-sm">Name</p><strong>{owner.fullName}</strong><p className="muted mt-5 text-sm">Email</p><strong>{user.email}</strong><form action={logout}><button className="btn-secondary mt-7">Sign out</button></form></div></div>}
